@@ -12,13 +12,13 @@ const Header = () => {
         <motion.div
           layoutId="main-logo"
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="md:hidden w-10 h-10"
+          className="md:hidden w-[80px] h-10"
         >
           <Image
             src="/logo.jpg"
             alt="Miracle Gul Logo"
-            width={40}
-            height={40}
+            width={100}
+            height={60}
             className="object-contain"
             priority
           />

@@ -18,7 +18,6 @@ const HeroSection = () => {
 
   return (
     <section className="relative overflow-hidden text-white bg-gradient-to-br from-green-950 via-green-900 to-red-900">
-      
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('/noise.png')] opacity-10" />
       <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-green-400/20 rounded-full blur-3xl" />
@@ -31,20 +30,20 @@ const HeroSection = () => {
         animate="show"
         className="relative max-w-7xl mx-auto px-6 py-28 grid md:grid-cols-2 gap-16 items-center"
       >
-
         {/* IMAGE / LOGO */}
         <motion.div
           variants={fadeUp}
-          className="relative h-80 md:h-[420px] flex items-center justify-center md:order-2"
+          className="relative flex items-center justify-center md:h-[420px] md:order-2"
         >
-          <div className="absolute inset-0 bg-white/10 rounded-3xl backdrop-blur-md shadow-2xl" />
+          {/* Desktop Background only */}
+          <div className="hidden md:block absolute inset-0 bg-white/10 rounded-3xl backdrop-blur-md shadow-2xl" />
 
-          {/* MOBILE → ANIMATED LOGO */}
+          {/* Mobile Logo */}
           {showHeroLogo && (
             <motion.div
               layoutId="main-logo"
               transition={{ duration: 0.8, ease: "easeInOut" }}
-              className="md:hidden w-full h-full flex items-center justify-center"
+              className="md:hidden flex items-center justify-center"
             >
               <Image
                 src="/logo.jpg"
@@ -57,7 +56,7 @@ const HeroSection = () => {
             </motion.div>
           )}
 
-          {/* DESKTOP → NORMAL IMAGE */}
+          {/* Desktop Image */}
           <div className="hidden md:block w-full h-full relative">
             <Image
               src="/logo.jpg"
@@ -86,9 +85,9 @@ const HeroSection = () => {
 
           <p className="text-gray-200 max-w-lg leading-relaxed">
             Unlock endless possibilities with our top-quality exports. We are a
-            trusted exporter of Agricultural & Allied Products, Coconuts & Allied
-            Products, Food Products, Handicrafts, and more — proudly serving
-            wholesalers and chain stores across the GCC.
+            trusted exporter of Agricultural & Allied Products, Coconuts &
+            Allied Products, Food Products, Handicrafts, and more — proudly
+            serving wholesalers and chain stores across the GCC.
           </p>
 
           <div className="flex flex-wrap gap-6 text-sm text-gray-300 pt-4">
@@ -112,7 +111,6 @@ const HeroSection = () => {
             </a>
           </div>
         </motion.div>
-
       </motion.div>
     </section>
   );
