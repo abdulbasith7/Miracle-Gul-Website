@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { fadeUp, stagger } from "@/utils/animations";
+import Image from "next/image";
 
 export default function AboutSections({ products }) {
   return (
@@ -33,7 +34,7 @@ export default function AboutSections({ products }) {
 
           <motion.p
             variants={fadeUp}
-            className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed"
+            className="text-lg text-gray-200 max-w-4xl mx-auto leading-relaxed"
           >
             Miracle Gul Business Hub SPC – Exports & Imports is a leading
             international trade company offering over fifty premium products.
@@ -105,23 +106,40 @@ export default function AboutSections({ products }) {
           </motion.h2>
 
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
-            {products.map((p, i) => (
+            {products.map((p) => (
               <motion.div
                 key={p.title}
                 variants={fadeUp}
-                whileHover={{ y: -8 }}
-                transition={{ type: "spring", stiffness: 200 }}
-                className="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl border border-gray-100"
+                whileHover={{ y: -10 }}
+                transition={{ type: "spring", stiffness: 180 }}
+                className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl overflow-hidden border border-gray-100"
               >
-                <div className="text-green-800 mb-4 text-4xl">
-                  {p.icon}
+                {/* IMAGE */}
+                <div className="relative h-56 w-full overflow-hidden">
+                  <Image
+                    src={p.image}
+                    // src={"/products/rice.jpeg"}
+                    alt={p.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+
+                  {/* Icon badge */}
+                  <div className="absolute top-4 left-4 bg-white/90 text-green-800 p-3 rounded-xl shadow">
+                    {p.icon}
+                  </div>
                 </div>
-                <h3 className="text-xl font-semibold mb-3">
-                  {p.title}
-                </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {p.desc}
-                </p>
+
+                {/* CONTENT */}
+                <div className="p-8">
+                  <h3 className="text-xl font-semibold mb-3">{p.title}</h3>
+                  <p className="text-gray-600 text-sm leading-relaxed">
+                    {p.desc}
+                  </p>
+                </div>
               </motion.div>
             ))}
           </div>

@@ -1,7 +1,6 @@
 // Next.js (App Router) – Static Single Page Website
 // File: app/page.tsx
 
-
 import type { Metadata } from "next";
 import Image from "next/image";
 import AboutSections from "@/components/AboutSections";
@@ -234,31 +233,37 @@ const products = [
   {
     title: "Rice & Grains",
     desc: "Rice, wheat, maize, pulses and millets.",
+    image: "/products/rice.jpeg",
     icon: <Leaf />,
   },
   {
     title: "Fresh & Dried Fruits",
     desc: "Fresh fruits and premium dried products.",
+    image: "/products/fruits.jpeg",
     icon: <Leaf />,
   },
   {
     title: "Coconut Products",
     desc: "Raw coconuts and value-added coconut products.",
+    image: "/products/coconut.jpeg",
     icon: <Leaf />,
   },
   {
     title: "Spices & Herbs",
     desc: "Dry chilli, ginger, turmeric and herbs.",
+    image: "/products/spices.jpeg",
     icon: <Leaf />,
   },
   {
     title: "Nuts & Seeds",
     desc: "Cashew, peanuts, anjeer nuts and more.",
+    image: "/products/nuts.jpeg",
     icon: <Leaf />,
   },
   {
     title: "Handicrafts & Textiles",
     desc: "Artisan handicrafts and textile made-ups.",
+    image: "/products/handicrafts.jpg",
     icon: <Leaf />,
   },
 ];
