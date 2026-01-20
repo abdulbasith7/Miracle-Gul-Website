@@ -47,7 +47,7 @@ const HeroSection = () => {
             >
               <Image
                 src="/logo.jpg"
-                alt="Miracle Gul Business Hub Logo"
+                alt="Miracle Gulf Business Hub Logo"
                 width={180}
                 height={180}
                 className="object-contain"
@@ -60,7 +60,7 @@ const HeroSection = () => {
           <div className="hidden md:block w-full h-full relative">
             <Image
               src="/logo.jpg"
-              alt="Miracle Gul Business Hub Logo"
+              alt="Miracle Gulf Business Hub Logo"
               fill
               className="object-contain p-10"
               priority
@@ -75,7 +75,7 @@ const HeroSection = () => {
           </p>
 
           <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.1]">
-            MIRACLE GUL <br />
+            MIRACLE GULF <br />
             <span className="text-green-300">BUSINESS HUB SPC</span>
           </h1>
 

@@ -17,9 +17,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Miracle Gul Business Hub SPC | Premium Exports & Imports",
+  title: "Miracle Gulf Business Hub SPC | Premium Exports & Imports",
   description:
-    "Miracle Gul Business Hub SPC is a leading exporter of premium agricultural, coconut, food, handicraft and industrial products serving GCC countries with quality, trust and reliability.",
+    "Miracle Gulf Business Hub SPC is a leading exporter of premium agricultural, coconut, food, handicraft and industrial products serving GCC countries with quality, trust and reliability.",
   keywords: [
     "GCC exporters",
     "agricultural exports",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     "bulk wholesale supplier",
   ],
   openGraph: {
-    title: "Miracle Gul Business Hub SPC",
+    title: "Miracle Gulf Business Hub SPC",
     description: "Your Gateway to Premium Quality Products for GCC Markets",
     type: "website",
   },
@@ -43,7 +43,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              MIRACLE GUL BUSINESS HUB SPC
+              MIRACLE GULF BUSINESS HUB SPC
             </h1>
             <p className="text-xl md:text-2xl text-gray-100">
               Your Gateway to Premium Quality Products
@@ -65,7 +65,7 @@ export default function Home() {
           </div>
 
           <div className="relative h-64 md:h-96 w-full">
-            <Image src="/logo.jpg" alt="Miracle Gul Logo" fill className="object-contain" />
+            <Image src="/logo.jpg" alt="Miracle Gulf Logo" fill className="object-contain" />
           </div>
         </div>
       </section> */}
@@ -94,7 +94,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-6 space-y-8">
           <h2 className="text-3xl font-bold text-center">About Us</h2>
           <p className="text-lg text-gray-600 text-center max-w-4xl mx-auto">
-            Miracle Gul Business Hub SPC – Exports & Imports is a leading
+            Miracle Gulf Business Hub SPC – Exports & Imports is a leading
             international trade company with over fifty premium products. Our
             journey began with a simple observation — the abundance of
             high-quality products in our region. We connected local farmers,
@@ -213,7 +213,7 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer className="bg-black text-gray-400 py-6 text-center text-sm">
-        © {new Date().getFullYear()} MIRACLE GUL BUSINESS HUB SPC. All Rights
+        © {new Date().getFullYear()} MIRACLE GULF BUSINESS HUB SPC. All Rights
         Reserved.
       </footer>
     </main>

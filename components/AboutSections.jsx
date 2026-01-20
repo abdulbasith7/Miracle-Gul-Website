@@ -36,7 +36,7 @@ export default function AboutSections({ products }) {
             variants={fadeUp}
             className="text-lg text-gray-200 max-w-4xl mx-auto leading-relaxed"
           >
-            Miracle Gul Business Hub SPC – Exports & Imports is a leading
+            Miracle Gulf Business Hub SPC – Exports & Imports is a leading
             international trade company offering over fifty premium products.
             Our journey began with a simple observation — the abundance of
             high-quality products in our region. We bridge local farmers,
@@ -48,49 +48,113 @@ export default function AboutSections({ products }) {
       {/* <section className="h-37.5  bg-black"></section> */}
 
       {/* VISION & VALUES */}
-      <section className="py-28 bg-gradient-to-b from-black via-green-900 to-white text-white relative overflow-hidden">
-        {/* <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-green-400/20 rounded-full blur-3xl" /> */}
+      <section className="py-32 bg-gradient-to-b from-black via-green-950 to-green-300 relative overflow-hidden">
+        {/* Decorative glow */}
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-green-500/10 rounded-full blur-3xl" />
 
         <motion.div
           variants={stagger}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          className="relative max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16"
+          className="relative max-w-7xl mx-auto px-6"
         >
-          <motion.div variants={fadeUp}>
-            <h3 className="text-3xl font-bold mb-6">Vision & Mission</h3>
-            <p className="text-gray-100 leading-relaxed">
-              Our mission is to become a leading GCC supplier of premium-quality
-              products, delighting customers with exceptional service while
-              empowering farmers and producers with financial freedom through
-              ethical and fair trade practices.
+          {/* Header */}
+          <motion.div
+            variants={fadeUp}
+            className="text-center max-w-3xl mx-auto mb-20"
+          >
+            <p className="uppercase tracking-widest text-sm font-semibold text-green-400 mb-4">
+              Our Foundation
             </p>
+            <h2 className="text-4xl md:text-5xl font-extrabold text-white">
+              Vision, Mission & Values
+            </h2>
           </motion.div>
 
-          <motion.div variants={fadeUp}>
-            <h3 className="text-3xl font-bold mb-6">Core Values</h3>
-            <div className="flex flex-wrap gap-4">
-              {["Quality", "Integrity", "Trust", "Reliability"].map((v, i) => (
-                <motion.span
-                  key={v}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: i * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.05 }}
-                  className="px-6 py-3 bg-white/10 rounded-full backdrop-blur-md border border-white/20"
-                >
-                  {v}
-                </motion.span>
-              ))}
-            </div>
-          </motion.div>
+          <div className="grid md:grid-cols-2 gap-16 items-start">
+            {/* Vision & Mission */}
+            <motion.div variants={fadeUp} className="space-y-10">
+              <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-10 shadow-xl">
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  Our Vision
+                </h3>
+                <p className="text-gray-100 leading-relaxed">
+                  To become a trusted global trade partner and a benchmark GCC
+                  supplier, recognized for delivering uncompromising quality,
+                  transparency, and long-term value across international
+                  markets.
+                </p>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-10 shadow-xl">
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  Our Mission
+                </h3>
+                <p className="text-gray-100 leading-relaxed">
+                  To connect farmers, artisans, and manufacturers with global
+                  opportunities by building ethical supply chains, delivering
+                  premium products, and fostering sustainable growth through
+                  fair trade and strategic partnerships.
+                </p>
+              </div>
+            </motion.div>
+
+            {/* Core Values */}
+            <motion.div
+              variants={fadeUp}
+              className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-10 shadow-xl"
+            >
+              <h3 className="text-2xl font-bold text-white mb-8">
+                Core Values That Guide Us
+              </h3>
+
+              <div className="grid sm:grid-cols-2 gap-6">
+                {[
+                  {
+                    title: "Uncompromising Quality",
+                    desc: "Every product meets stringent standards to exceed market expectations.",
+                  },
+                  {
+                    title: "Integrity in Trade",
+                    desc: "We operate with honesty, transparency, and ethical responsibility.",
+                  },
+                  {
+                    title: "Trusted Partnerships",
+                    desc: "Long-term relationships built on reliability and mutual respect.",
+                  },
+                  {
+                    title: "Operational Excellence",
+                    desc: "Consistent performance through efficiency, accountability, and innovation.",
+                  },
+                ].map((item, i) => (
+                  <motion.div
+                    key={item.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.1 }}
+                    viewport={{ once: true }}
+                    className="p-6 rounded-2xl bg-black/30 border border-white/10 hover:border-green-400/40 transition"
+                  >
+                    <h4 className="font-semibold text-white mb-2">
+                      {item.title}
+                    </h4>
+                    <p className="text-sm text-gray-200 leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
         </motion.div>
+      </section>
+      <section className="py-16 bg-gradient-to-b  from-green-300  to-white relative overflow-hidden">
+
       </section>
 
       {/* PRODUCTS */}
-      <section id="products" className="py-28 bg-gray-50">
+      <section id="products" className="pb-28 pt-10 bg-gray-50">
         <motion.div
           variants={stagger}
           initial="hidden"
