@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { fadeUp, stagger } from "@/utils/animations";
+import { fadeLogo, fadeUp, stagger } from "@/utils/animations";
 import { useEffect, useState } from "react";
+import HeroVideo from "./HeroVideo";
 
 const HeroSection = () => {
   const [showHeroLogo, setShowHeroLogo] = useState(true);
@@ -36,7 +37,7 @@ const HeroSection = () => {
           className="relative flex items-center justify-center md:h-[420px] md:order-2"
         >
           {/* Desktop Background only */}
-          <div className="hidden md:block absolute inset-0 bg-white/10 rounded-3xl backdrop-blur-md shadow-2xl" />
+          <div className="hidden md:block absolute inset-0 bg-white/5 rounded-3xl backdrop-blur-md shadow-2xl" />
 
           {/* Mobile Logo */}
           {showHeroLogo && (
@@ -46,7 +47,7 @@ const HeroSection = () => {
               className="md:hidden flex items-center justify-center"
             >
               <Image
-                src="/logo.jpg"
+                src="/logo.png"
                 alt="Miracle Gulf Business Hub Logo"
                 width={180}
                 height={180}
@@ -58,13 +59,15 @@ const HeroSection = () => {
 
           {/* Desktop Image */}
           <div className="hidden md:block w-full h-full relative">
-            <Image
-              src="/logo.jpg"
-              alt="Miracle Gulf Business Hub Logo"
-              fill
-              className="object-contain p-10"
-              priority
-            />
+            <motion.div variants={fadeLogo}>
+              <Image
+                src="/logo2.png"
+                alt="Miracle Gulf Business Hub Logo"
+                fill
+                className="object-contain p-10"
+                priority
+              />
+            </motion.div>
           </div>
         </motion.div>
 
@@ -75,8 +78,8 @@ const HeroSection = () => {
           </p>
 
           <h1 className="text-5xl md:text-7xl font-extrabold leading-[1.1]">
-            MIRACLE GULF <br />
-            <span className="text-green-300">BUSINESS HUB SPC</span>
+            MIRACLE <br />
+            <span className="text-green-300">BUSINESS HUB</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-100 max-w-xl">
@@ -87,7 +90,7 @@ const HeroSection = () => {
             Unlock endless possibilities with our top-quality exports. We are a
             trusted exporter of Agricultural & Allied Products, Coconuts &
             Allied Products, Food Products, Handicrafts, and more — proudly
-            serving wholesalers and chain stores across the GCC.
+            serving wholesalers and chain stores across the GCC & Middle East.
           </p>
 
           <div className="flex flex-wrap gap-6 text-sm text-gray-300 pt-4">
@@ -112,6 +115,7 @@ const HeroSection = () => {
           </div>
         </motion.div>
       </motion.div>
+      <HeroVideo />
     </section>
   );
 };

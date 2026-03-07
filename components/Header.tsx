@@ -15,7 +15,7 @@ const Header = () => {
           className="md:hidden w-[80px] h-10"
         >
           <Image
-            src="/logo.jpg"
+            src="/logo.png"
             alt="Miracle Gulf Logo"
             width={100}
             height={60}
@@ -27,7 +27,7 @@ const Header = () => {
         {/* DESKTOP LOGO */}
         <div className="hidden md:flex items-center gap-3">
           <Image
-            src="/logo.jpg"
+            src="/logo.png"
             alt="Miracle Gulf Logo"
             width={100}
             height={60}

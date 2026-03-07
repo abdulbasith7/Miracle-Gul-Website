@@ -14,12 +14,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Miracle Gulf Business Hub SPC | Premium Exports & Imports",
+  title: "Miracle Business Hub | Premium Exports & Imports",
   // icons: {
   //   icon: "/favicon.png",
   // },
   description:
-    "Miracle Gulf Business Hub SPC is a leading exporter of premium agricultural, coconut, food, handicraft and industrial products serving GCC countries with quality, trust and reliability.",
+    "Miracle Business Hub is a leading exporter of premium agricultural, coconut, food, handicraft and industrial products serving GCC countries with quality, trust and reliability.",
 };
 
 export default function RootLayout({

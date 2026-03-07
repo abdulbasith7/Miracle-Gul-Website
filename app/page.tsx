@@ -5,6 +5,10 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import AboutSections from "@/components/AboutSections";
 import HeroSection from "@/components/HeroSection";
+import HeroVideo from "@/components/HeroVideo";
+import BranchContacts from "@/components/BranchContacts";
+import OmanBranch from "@/components/OmanBranch";
+import PaymentTerms from "@/components/PaymentTerms";
 import {
   Truck,
   Package,
@@ -17,9 +21,9 @@ import {
 } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Miracle Gulf Business Hub SPC | Premium Exports & Imports",
+  title: "Miracle Business Hub | Premium Exports & Imports",
   description:
-    "Miracle Gulf Business Hub SPC is a leading exporter of premium agricultural, coconut, food, handicraft and industrial products serving GCC countries with quality, trust and reliability.",
+    "Miracle Business Hub is a leading exporter of premium agricultural, coconut, food, handicraft and industrial products serving GCC countries with quality, trust and reliability.",
   keywords: [
     "GCC exporters",
     "agricultural exports",
@@ -29,7 +33,7 @@ export const metadata: Metadata = {
     "bulk wholesale supplier",
   ],
   openGraph: {
-    title: "Miracle Gulf Business Hub SPC",
+    title: "Miracle Business Hub",
     description: "Your Gateway to Premium Quality Products for GCC Markets",
     type: "website",
   },
@@ -70,7 +74,8 @@ export default function Home() {
         </div>
       </section> */}
       <HeroSection />
-
+      {/* <HeroVideo /> */}
+      {/* <PaymentTerms /> */}
       {/* WHY PARTNER */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
@@ -167,21 +172,19 @@ export default function Home() {
         </div>
       </section> */}
 
+      
+
       {/* CONTACT */}
       <section id="contact" className="py-20 bg-gray-900 text-white">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12">
           <div>
             <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
             <p className="text-gray-300 mb-6">
-              Let’s discuss how we can supply your business with top-quality
-              products.
+              Contact any of our branches for product supply inquiries and
+              partnerships.
             </p>
-            <p className="flex items-center gap-3 mb-3">
-              <Mail /> Email: info@miraclegul.com
-            </p>
-            <p className="flex items-center gap-3">
-              <Phone /> Phone: +971 XXXXXXXX
-            </p>
+
+            <BranchContacts />
           </div>
           <form
             action="https://formspree.io/f/xbddllzw"
@@ -213,8 +216,7 @@ export default function Home() {
 
       {/* FOOTER */}
       <footer className="bg-black text-gray-400 py-6 text-center text-sm">
-        © {new Date().getFullYear()} MIRACLE GULF BUSINESS HUB SPC. All Rights
-        Reserved.
+        MIRACLE BUSINESS HUB. • Since 2025 • All Rights Reserved.
       </footer>
     </main>
   );
@@ -237,11 +239,17 @@ const products = [
     icon: <Leaf />,
   },
   {
-    title: "Fresh & Dried Fruits",
-    desc: "Fresh fruits and premium dried products.",
-    image: "/products/fruits.jpeg",
+    title: "Cardamom",
+    desc: "High-grade green cardamom sourced from select farms.",
+    image: "/products/cardomon.jpeg",
     icon: <Leaf />,
   },
+  // {
+  //   title: "Fresh & Dried Fruits",
+  //   desc: "Fresh fruits and premium dried products.",
+  //   image: "/products/fruits.jpeg",
+  //   icon: <Leaf />,
+  // },
   {
     title: "Coconut Products",
     desc: "Raw coconuts and value-added coconut products.",
@@ -254,16 +262,29 @@ const products = [
     image: "/products/spices.jpeg",
     icon: <Leaf />,
   },
+  // {
+  //   title: "Nuts & Seeds",
+  //   desc: "Cashew, peanuts, anjeer nuts and more.",
+  //   image: "/products/nuts.jpeg",
+  //   icon: <Leaf />,
+  // },
+  // {
+  //   title: "Handicrafts & Textiles",
+  //   desc: "Artisan handicrafts and textile made-ups.",
+  //   image: "/products/handicrafts.jpg",
+  //   icon: <Leaf />,
+  // },
   {
-    title: "Nuts & Seeds",
-    desc: "Cashew, peanuts, anjeer nuts and more.",
-    image: "/products/nuts.jpeg",
+    title: "Black Pepper",
+    desc: "Premium export-quality whole and ground black pepper.",
+    image: "/products/pepper.jpg",
     icon: <Leaf />,
   },
+
   {
-    title: "Handicrafts & Textiles",
-    desc: "Artisan handicrafts and textile made-ups.",
-    image: "/products/handicrafts.jpg",
+    title: "Sugar",
+    desc: "Refined and raw sugar suitable for bulk export.",
+    image: "/products/sugar.jpeg",
     icon: <Leaf />,
   },
 ];

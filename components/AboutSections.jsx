@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { fadeUp, stagger } from "@/utils/animations";
 import Image from "next/image";
+import OmanBranch from "./OmanBranch";
 
 export default function AboutSections({ products }) {
   return (
@@ -149,9 +150,7 @@ export default function AboutSections({ products }) {
           </div>
         </motion.div>
       </section>
-      <section className="py-16 bg-gradient-to-b  from-green-300  to-white relative overflow-hidden">
-
-      </section>
+      <section className="py-16 bg-gradient-to-b  from-green-300  to-white relative overflow-hidden"></section>
 
       {/* PRODUCTS */}
       <section id="products" className="pb-28 pt-10 bg-gray-50">
@@ -209,6 +208,8 @@ export default function AboutSections({ products }) {
           </div>
         </motion.div>
       </section>
+
+      <OmanBranch />
 
       {/* ROADMAP */}
       <section className="py-28 relative overflow-hidden">

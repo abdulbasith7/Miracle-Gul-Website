@@ -4,7 +4,15 @@ export const fadeUp = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, ease: "easeOut" },
+    transition: { duration: 1.2, ease: "easeOut" },
+  },
+};
+export const fadeLogo = {
+  hidden: { opacity: 0, y: 80 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1.8, ease: "easeOut" },
   },
 };
 
