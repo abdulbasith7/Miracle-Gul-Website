@@ -12,10 +12,10 @@ const Header = () => {
         <motion.div
           layoutId="main-logo"
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="md:hidden w-[80px] h-10"
+          className="md:hidden w-[80px] h-10 -mt-14"
         >
           <Image
-            src="/logo.png"
+            src="/logo2.png"
             alt="Miracle Gulf Logo"
             width={100}
             height={60}
@@ -27,7 +27,7 @@ const Header = () => {
         {/* DESKTOP LOGO */}
         <div className="hidden md:flex items-center gap-3">
           <Image
-            src="/logo.png"
+            src="/logo2.png"
             alt="Miracle Gulf Logo"
             width={100}
             height={60}

@@ -2,9 +2,10 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { fadeLogo, fadeUp, stagger } from "@/utils/animations";
+import { fadeLogo, fadeUp, scaleIn, stagger } from "@/utils/animations";
 import { useEffect, useState } from "react";
 import HeroVideo from "./HeroVideo";
+import FloatingComponent from "./FloatingComponent";
 
 const HeroSection = () => {
   const [showHeroLogo, setShowHeroLogo] = useState(true);
@@ -48,7 +49,7 @@ const HeroSection = () => {
             >
               <Image
                 src="/logo2.png"
-                alt="Miracle Gulf Business Hub Logo"
+                alt="Miracle Business Hub Logo"
                 width={180}
                 height={180}
                 className="object-contain"
@@ -59,14 +60,16 @@ const HeroSection = () => {
 
           {/* Desktop Image */}
           <div className="hidden md:block w-full h-full relative">
-            <motion.div variants={fadeLogo}>
-              <Image
-                src="/logo2.png"
-                alt="Miracle Gulf Business Hub Logo"
-                fill
-                className="object-contain p-10"
-                priority
-              />
+            <motion.div variants={scaleIn}>
+              {/* <FloatingComponent> */}
+                <Image
+                  src="/logo2.png"
+                  alt="Miracle Business Hub Logo"
+                  fill
+                  className="object-contain p-10 float"
+                  priority
+                />
+              {/* </FloatingComponent> */}
             </motion.div>
           </div>
         </motion.div>
