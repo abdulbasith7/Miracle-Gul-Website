@@ -8,13 +8,15 @@ export default function HeroVideo() {
       <video
         className="h-screen mx-auto object-contain"
         autoPlay
-        muted
+        // muted
         loop
         playsInline
       >
         <source src="/video.mp4" type="video/mp4" />
       </video>
-      <PaymentTerms />
+      <div className="mt-10 lg:mt-1">
+        <PaymentTerms />
+      </div>
     </div>
   );
 }

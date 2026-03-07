@@ -47,7 +47,7 @@ const HeroSection = () => {
               className="md:hidden flex items-center justify-center"
             >
               <Image
-                src="/logo.png"
+                src="/logo2.png"
                 alt="Miracle Gulf Business Hub Logo"
                 width={180}
                 height={180}
