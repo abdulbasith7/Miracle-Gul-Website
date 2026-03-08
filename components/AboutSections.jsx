@@ -37,7 +37,7 @@ export default function AboutSections({ products }) {
             variants={fadeUp}
             className="text-lg text-gray-200 max-w-4xl mx-auto leading-relaxed"
           >
-            Miracle Gulf Business Hub SPC – Exports & Imports is a leading
+            Miracle Business Hub – Exports & Imports is a leading
             international trade company offering over fifty premium products.
             Our journey began with a simple observation — the abundance of
             high-quality products in our region. We bridge local farmers,

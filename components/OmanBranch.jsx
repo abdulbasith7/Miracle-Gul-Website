@@ -48,7 +48,7 @@ export default function OmanBranch() {
             </div>
 
             <h3 className="text-xl font-semibold text-gray-900 mb-2">
-              Miracle Gulf Business Hub SPC
+              Miracle Gulf Business Hub
             </h3>
 
             <p className="text-gray-500 mb-3">Oman</p>

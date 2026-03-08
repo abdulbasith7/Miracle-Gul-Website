@@ -16,7 +16,7 @@ const Header = () => {
         >
           <Image
             src="/logo2.png"
-            alt="Miracle Gulf Logo"
+            alt="Miracle Logo"
             width={100}
             height={60}
             className="object-contain"
@@ -28,7 +28,7 @@ const Header = () => {
         <div className="hidden md:flex items-center gap-3">
           <Image
             src="/logo2.png"
-            alt="Miracle Gulf Logo"
+            alt="Miracle Logo"
             width={100}
             height={60}
             className="object-contain"
