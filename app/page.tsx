@@ -80,7 +80,7 @@ export default function Home() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-14">
-            Why Partner with MIRACLE GUL?
+            Why Partner with MIRACLE?
           </h2>
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
             <Feature icon={<ShieldCheck />} title="Premium Quality" />

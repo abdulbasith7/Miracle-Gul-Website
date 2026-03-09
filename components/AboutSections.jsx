@@ -30,7 +30,7 @@ export default function AboutSections({ products }) {
             variants={fadeUp}
             className="text-4xl md:text-5xl font-extrabold"
           >
-            About Miracle Gul
+            About Miracle 
           </motion.h2>
 
           <motion.p
