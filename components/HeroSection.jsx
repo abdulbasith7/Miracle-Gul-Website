@@ -38,7 +38,7 @@ const HeroSection = () => {
           className="relative flex items-center justify-center md:h-[420px] md:order-2"
         >
           {/* Desktop Background only */}
-          <div className="hidden md:block absolute inset-0 bg-white/5 rounded-3xl backdrop-blur-md shadow-2xl" />
+          <div className="hidden md:block absolute inset-0 bg-white/90 opacity-90 rounded-3xl backdrop-blur-md shadow-2xl" />
 
           {/* Mobile Logo */}
           {showHeroLogo && (
