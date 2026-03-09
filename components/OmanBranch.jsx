@@ -3,7 +3,7 @@ import { Globe, MapPin } from "lucide-react";
 
 export default function OmanBranch() {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-5 bg-gray-50">
       <div className="max-w-6xl mx-auto px-6 text-center">
 
         <div className="flex justify-center mb-4">

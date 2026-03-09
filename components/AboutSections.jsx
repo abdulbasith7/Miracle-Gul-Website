@@ -9,8 +9,8 @@ export default function AboutSections({ products }) {
   return (
     <>
       {/* ABOUT */}
-      <section id="aboutus" className="py-28 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-white from-5%  via-red-950 via-70%  to-black to-100%" />
+      <section id="aboutus" className="py-14 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50 from-5%  via-red-950 via-70%  to-black to-100%" />
 
         <motion.div
           variants={stagger}
@@ -49,7 +49,7 @@ export default function AboutSections({ products }) {
       {/* <section className="h-37.5  bg-black"></section> */}
 
       {/* VISION & VALUES */}
-      <section id="vision" className="py-32 bg-gradient-to-b from-black via-green-950 to-green-300 relative overflow-hidden">
+      <section id="vision" className="py-12 bg-gradient-to-b from-black via-green-950 to-green-300 relative overflow-hidden">
         {/* Decorative glow */}
         <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-green-500/10 rounded-full blur-3xl" />
 
@@ -150,10 +150,10 @@ export default function AboutSections({ products }) {
           </div>
         </motion.div>
       </section>
-      <section className="py-16 bg-gradient-to-b  from-green-300  to-white relative overflow-hidden"></section>
+      <section className="py-8 bg-gradient-to-b  from-green-300  to-white relative overflow-hidden"></section>
 
       {/* PRODUCTS */}
-      <section id="products" className="pb-28 pt-10 bg-gray-50">
+      <section id="products" className="pb-10 pt-10 bg-gray-50">
         <motion.div
           variants={stagger}
           initial="hidden"

@@ -1,21 +1,29 @@
-import { useEffect, useRef } from "react";
-import PaymentTerms from "./PaymentTerms";
+import { useEffect, useRef, useState } from "react";
 
 export default function HeroVideo() {
   const videoRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
 
+    // detect mobile
+    const mobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    setIsMobile(mobile);
+
+    if (mobile && video) {
+      video.muted = true; // required for autoplay on mobile
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          video.play();
+          video?.play().catch(() => {});
         } else {
-          video.pause();
+          video?.pause();
         }
       },
-      { threshold: 0.5 }, // 50% visible
+      { threshold: 0.5 }
     );
 
     if (video) observer.observe(video);
@@ -24,23 +32,34 @@ export default function HeroVideo() {
       if (video) observer.unobserve(video);
     };
   }, []);
+
+  const enableSound = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = false;
+      videoRef.current.play();
+    }
+  };
+
   return (
-    <div className="relative w-full  overflow-hidden ">
-      {/* <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-red-400/20 rounded-full blur-3xl" /> */}
-      {/* <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-green-400/20 rounded-full blur-3xl" /> */}
+    <div className="relative w-full overflow-hidden">
       <video
         ref={videoRef}
         className="h-screen mx-auto object-contain"
         autoPlay
-        // muted
         loop
         playsInline
       >
         <source src="/video.mp4" type="video/mp4" />
       </video>
-      {/* <div className="mt-10 lg:mt-1">
-        <PaymentTerms />
-      </div> */}
+
+      {isMobile && (
+        <button
+          onClick={enableSound}
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 bg-black/70 text-white px-4 py-2 rounded-lg"
+        >
+          🔊 Enable Sound
+        </button>
+      )}
     </div>
   );
 }

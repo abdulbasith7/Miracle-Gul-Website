@@ -38,7 +38,7 @@ const HeroSection = () => {
           className="relative flex items-center justify-center md:h-[420px] md:order-2"
         >
           {/* Desktop Background only */}
-          <div className="hidden md:block absolute inset-0 bg-white/90 opacity-90 rounded-3xl backdrop-blur-md shadow-2xl" />
+          <div className="hidden -mt-20 md:block absolute inset-0 bg-white/90 opacity-40 rounded-3xl backdrop-blur-md shadow-2xl" />
 
           {/* Mobile Logo */}
           {showHeroLogo && (
@@ -66,7 +66,7 @@ const HeroSection = () => {
                   src="/logo2.png"
                   alt="Miracle Business Hub Logo"
                   fill
-                  className="object-contain p-10 float"
+                  className="object-contain p-10 float -mt-10"
                   priority
                 />
               {/* </FloatingComponent> */}
