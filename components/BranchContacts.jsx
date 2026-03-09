@@ -18,19 +18,20 @@ export default function BranchContacts() {
   ];
 
   return (
-    <div className="grid sm:grid-cols-2 gap-6">
+    <div className="grid sm:grid-cols-1 gap-6">
       {branches.map((branch, index) => (
         <div
           key={index}
           className="bg-gray-800 p-6 rounded-2xl border border-gray-700 hover:border-green-600 transition"
         >
-          <h3 className="text-xl font-semibold text-white mb-2">
-            {branch.name}
-          </h3>
-
-          <p className="flex items-center gap-2 text-gray-400 mb-3">
-            <MapPin size={18} /> {branch.country}
-          </p>
+          <div className="flex items-center justify-between">
+            <h3 className="text-xl font-semibold text-white mb-2">
+              {branch.name}
+            </h3>
+            <p className="flex items-center gap-2 text-gray-400 mb-3">
+              <MapPin size={18} /> {branch.country}
+            </p>
+          </div>
 
           <p className="flex items-center gap-2 text-gray-300 mb-2">
             <Phone size={18} /> {branch.phone}

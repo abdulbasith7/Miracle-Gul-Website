@@ -38,9 +38,9 @@ export default function HeroVideo() {
       >
         <source src="/video.mp4" type="video/mp4" />
       </video>
-      <div className="mt-10 lg:mt-1">
+      {/* <div className="mt-10 lg:mt-1">
         <PaymentTerms />
-      </div>
+      </div> */}
     </div>
   );
 }

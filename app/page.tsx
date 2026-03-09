@@ -189,20 +189,20 @@ export default function Home() {
           <form
             action="https://formspree.io/f/xbddllzw"
             method="POST"
-            className="bg-white text-gray-800 p-6 rounded-2xl shadow space-y-4"
+            className="bg-gray-800 text-gray-800 p-6 rounded-2xl shadow space-y-4"
           >
             <input
-              className="w-full border p-3 rounded-xl"
+              className="w-full border p-3 rounded-xl bg-white text-gray-900"
               placeholder="Your Name"
               name="name"
             />
             <input
-              className="w-full border p-3 rounded-xl"
+              className="w-full border p-3 rounded-xl bg-white text-gray-900"
               placeholder="Email"
               name="email"
             />
             <textarea
-              className="w-full border p-3 rounded-xl"
+              className="w-full border p-3 rounded-xl bg-white text-gray-900"
               rows={4}
               placeholder="Message"
               name="message"
