@@ -3,11 +3,17 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+const navLinks = [
+  { label: "About", href: "#aboutus" },
+  { label: "Vision", href: "#vision" },
+  { label: "Products", href: "#products" },
+  { label: "Contact", href: "#contact" },
+];
+
 const Header = () => {
   return (
     <header className="fixed top-0 w-full z-50 bg-black/40 backdrop-blur-md">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center">
-
+      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* MOBILE LOGO TARGET */}
         <motion.div
           layoutId="main-logo"
@@ -34,7 +40,17 @@ const Header = () => {
             className="object-contain"
           />
         </div>
-
+        <div className="hidden lg:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="text-sm tracking-wider uppercase text-muted-foreground hover-gold transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
       </div>
     </header>
   );

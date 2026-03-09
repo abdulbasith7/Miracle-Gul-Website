@@ -9,7 +9,7 @@ export default function AboutSections({ products }) {
   return (
     <>
       {/* ABOUT */}
-      <section className="py-28 relative overflow-hidden">
+      <section id="aboutus" className="py-28 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-white from-5%  via-red-950 via-70%  to-black to-100%" />
 
         <motion.div
@@ -49,7 +49,7 @@ export default function AboutSections({ products }) {
       {/* <section className="h-37.5  bg-black"></section> */}
 
       {/* VISION & VALUES */}
-      <section className="py-32 bg-gradient-to-b from-black via-green-950 to-green-300 relative overflow-hidden">
+      <section id="vision" className="py-32 bg-gradient-to-b from-black via-green-950 to-green-300 relative overflow-hidden">
         {/* Decorative glow */}
         <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-green-500/10 rounded-full blur-3xl" />
 
