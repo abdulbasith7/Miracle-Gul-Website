@@ -227,7 +227,7 @@ export default function AboutSections({ products }) {
           </p>
 
           <h2 className="text-4xl md:text-5xl font-extrabold">
-            Growth Roadmap (2026 – 2030)
+            Growth Roadmap (2025 – 2030)
           </h2>
 
           <p className="text-lg text-gray-200 leading-relaxed">

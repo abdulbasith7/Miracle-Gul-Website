@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-export default function HeroVideo() {
+export default function HeroVideoWeb() {
   const videoRef = useRef(null);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -41,7 +41,7 @@ export default function HeroVideo() {
   };
 
   return (
-    <div className="relative w-full overflow-hidden" onClick={enableSound}>
+    <div className="relative w-full overflow-hidden">
       <video
         ref={videoRef}
         className="h-screen mx-auto object-contain"
@@ -52,14 +52,14 @@ export default function HeroVideo() {
         <source src="/video.mp4" type="video/mp4" />
       </video>
 
-      {/* {isMobile && (
+      {isMobile && (
         <button
           onClick={enableSound}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 bg-black/70 text-white px-4 py-2 rounded-lg"
         >
-          🔊 Enable Sound
+          🔊
         </button>
-      )} */}
+      )}
     </div>
   );
 }

@@ -7,6 +7,9 @@ import { useEffect, useState } from "react";
 import HeroVideo from "./HeroVideo";
 import FloatingComponent from "./FloatingComponent";
 
+import HeroVideoWeb from "./HeroVideoWeb";
+import HeroVideoW from "./HeroVideoW";
+
 const HeroSection = () => {
   const [showHeroLogo, setShowHeroLogo] = useState(true);
 
@@ -62,13 +65,13 @@ const HeroSection = () => {
           <div className="hidden md:block w-full h-full relative">
             <motion.div variants={scaleIn}>
               {/* <FloatingComponent> */}
-                <Image
-                  src="/logo2.png"
-                  alt="Miracle Business Hub Logo"
-                  fill
-                  className="object-contain p-10 float -mt-10"
-                  priority
-                />
+              <Image
+                src="/logo2.png"
+                alt="Miracle Business Hub Logo"
+                fill
+                className="object-contain p-10 float -mt-10"
+                priority
+              />
               {/* </FloatingComponent> */}
             </motion.div>
           </div>
@@ -118,7 +121,13 @@ const HeroSection = () => {
           </div>
         </motion.div>
       </motion.div>
-      <HeroVideo />
+      {/* <HeroVideoWeb /> */}
+      <div className="hidden md:block">
+        <HeroVideoW />
+      </div>
+      <div className="block md:hidden">
+        <HeroVideo />
+      </div>
     </section>
   );
 };
