@@ -41,7 +41,7 @@ const HeroSection = () => {
           className="relative flex items-center justify-center md:h-[420px] md:order-2"
         >
           {/* Desktop Background only */}
-          <div className="hidden -mt-20 md:block absolute inset-0 bg-white/90 opacity-40 rounded-3xl backdrop-blur-md shadow-2xl" />
+          <div className="hidden bottom-20 -mt-10 md:block absolute inset-0 bg-white/90 opacity-40 rounded-3xl backdrop-blur-md shadow-2xl" />
 
           {/* Mobile Logo */}
           {showHeroLogo && (
@@ -69,7 +69,7 @@ const HeroSection = () => {
                 src="/logo2.png"
                 alt="Miracle Business Hub Logo"
                 fill
-                className="object-contain p-10 float -mt-10"
+                className="object-contain p-10 float -mt-14"
                 priority
               />
               {/* </FloatingComponent> */}
@@ -122,12 +122,12 @@ const HeroSection = () => {
         </motion.div>
       </motion.div>
       {/* <HeroVideoWeb /> */}
-      <div className="hidden md:block">
-        <HeroVideoW />
-      </div>
+      {/* <div className="hidden md:block"> */}
+      <HeroVideoW />
+      {/* </div>
       <div className="block md:hidden">
         <HeroVideo />
-      </div>
+      </div> */}
     </section>
   );
 };

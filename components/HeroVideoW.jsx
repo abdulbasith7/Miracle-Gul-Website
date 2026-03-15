@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import PaymentTerms from "./PaymentTerms";
 
 export default function HeroVideoW() {
   const videoRef = useRef(null);
@@ -9,13 +8,20 @@ export default function HeroVideoW() {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
+        if (!video) return;
+
         if (entry.isIntersecting) {
-          video.play();
+          video.play().catch(() => {});
+
+          // try enabling sound after delay
+        //   setTimeout(() => {
+        //     video.muted = false;
+        //   }, 1000);
         } else {
           video.pause();
         }
       },
-      { threshold: 0.5 }, // 50% visible
+      { threshold: 0.5 }
     );
 
     if (video) observer.observe(video);
@@ -24,10 +30,9 @@ export default function HeroVideoW() {
       if (video) observer.unobserve(video);
     };
   }, []);
+
   return (
-    <div className="relative w-full  overflow-hidden ">
-      {/* <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-red-400/20 rounded-full blur-3xl" /> */}
-      {/* <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-green-400/20 rounded-full blur-3xl" /> */}
+    <div className="relative w-full overflow-hidden">
       <video
         ref={videoRef}
         className="h-screen mx-auto object-contain"
@@ -35,12 +40,10 @@ export default function HeroVideoW() {
         // muted
         loop
         playsInline
+        controls
       >
         <source src="/video.mp4" type="video/mp4" />
       </video>
-      {/* <div className="mt-10 lg:mt-1">
-        <PaymentTerms />
-      </div> */}
     </div>
   );
 }
